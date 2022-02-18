@@ -13,7 +13,7 @@ class Rival{
     this.track=0;
     this.on=true;}
     run(){
-        // Returns a random integer from 1 to 6:
+        // Returns a random integer from 1 to 5:
         let next=Math.floor(Math.random() * 5) + 1;
         this.track+=next; 
         // return this.track; //sera que retornamos el valor
@@ -31,41 +31,37 @@ class Rival{
     }
 }
 
-
 // -------------------------------    Comienza el juego  -----------------------
+let meta=Math.floor(Math.random() * 30) + 10;   //meta f
+console.log(`la meta esta a los ${meta}000 mts`);
+
 let name= prompt(`Por favor introduzca su nombre`);
 let team = prompt(`Por favo1 introduzca su equipo`);
 let player = new Rival(name,team);   //Usuario
 
 
+let bots=Math.floor(Math.random() * 5) + 3;  //Bots
+for (let i = 0; i< bots; i++) {challenger[i]= new Rival(rivals[i],teams[i]); } 
 
-let rivs=Math.floor(Math.random() * 5) + 3;  //rivales
-for (let i = 0; i< rivs; i++) {
-    challenger[i]= new Rival(rivals[i],teams[i]);  
-} 
-
-let pista=Math.floor(Math.random() * 30) + 10;   //pista
-console.log(`la pista mide ${pista}`);
 let podio =[];
 
-
-
+challenger.unshift(player); //indexando el usuario a lista de competidores
 
 // ===========********* impresiones ************==============
 console.log(challenger);
 
 for (let i = 0 ; podio.length < 3; i++) {  
     
-    if (challenger[i].on==true) {challenger[i].run(); console.log(`el  ${i} es el rrecorrido ${challenger[i].track}`)}
-    if (challenger[i].on==false) {console.log(`este ya gano`);i=0;continue}
-    if (challenger[i].track>=pista && challenger[i].on==true) {challenger[i].on=false;podio.push(challenger[i]);}
-    if (i==(challenger.length-1)) {i=-1;}
+    if (challenger[i].on==false) {continue;}           //si ya gano se salta a el siguiente jugador
+    if (challenger[i].on==true) {challenger[i].run();} //solo correran los que no hayan ganado 
+    if (challenger[i].on==true && challenger[i].track>=meta) {challenger[i].on=false;podio.push(challenger[i]);} //** si ya alcanzo o supero la meta se pasa a el podio
+    if (i==(challenger.length-1)) {i=-1;}              //si se alcanza el final del arreglo vuelve al inicio
 }
 
 
 console.log(podio);
 
-let msj=player.show()
-document.write(msj);
+// let msj=player.show()
+// document.write(msj);
 
 // alert("¡Game Over!");
