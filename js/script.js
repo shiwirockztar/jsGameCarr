@@ -1,6 +1,7 @@
 // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_setinterval_progressbar
 file:///C:/Users/Shiwirockztar/Downloads/javascLabs/jsGameCarr/index.html
-aaa
+
+algoritmo tremur 
 
 function Rival(name,carr){
     this.name =name;

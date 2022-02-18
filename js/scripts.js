@@ -1,7 +1,7 @@
 // bots rivales
 const rivals =["hamilton","vettel","alonso","montoya","button","flash"];        
 const teams =["maclaren","redbull","ferrari","wiliams","aston martin","dc"];
-const challenger = [];
+let challenger = [];
 
 // creador de competidores
 class Rival{
@@ -11,7 +11,7 @@ class Rival{
     if (team == null || team=="") {team="team"; }
     this.team=team;
     this.track=0;
-    this.puesto=0;}
+    this.on=true;}
     run(){
         // Returns a random integer from 1 to 6:
         let next=Math.floor(Math.random() * 5) + 1;
@@ -23,44 +23,49 @@ class Rival{
         let text =`El jugador  ${this.name} juega con el equipo ${this.team} y lleva ${this.track}000 avanzado`;
         return text;
     }
+    apagar(){
+        this.on=false
+    }
+    get getTrack(){
+        return this.track;
+    }
 }
 
 
 // -------------------------------    Comienza el juego  -----------------------
-// let name,team = prompt("Por favor introduzca su nombre y su equipo);
-// let name,team = prompt("Por favor introduzca su nombre");
 let name= prompt(`Por favor introduzca su nombre`);
-let team = prompt(`Por favor introduzca su equipo`);
+let team = prompt(`Por favo1 introduzca su equipo`);
 let player = new Rival(name,team);   //Usuario
 
 
-let rivs=Math.floor(Math.random() * 5) + 2;  //rivales
+
+let rivs=Math.floor(Math.random() * 5) + 3;  //rivales
 for (let i = 0; i< rivs; i++) {
     challenger[i]= new Rival(rivals[i],teams[i]);  
 } 
 
 let pista=Math.floor(Math.random() * 30) + 10;   //pista
-let k=0;
-while(k<3){
-    challenger[k].run();
-    challenger[k].show();
-    if (challenger[k].track>=pista && challenger[k].puesto==0) {
-        console.log(`tenemos un ganador en ${k} y es `)
-    k++;
-    //     i++;
-    //     challenger[i].puesto=i;
-    }
-    console.log(k);
-    // k++;
-}
+console.log(`la pista mide ${pista}`);
+let podio =[];
+
+
 
 
 // ===========********* impresiones ************==============
 console.log(challenger);
-player.run();
+
+for (let i = 0 ; podio.length < 3; i++) {  
+    
+    if (challenger[i].on==true) {challenger[i].run(); console.log(`el  ${i} es el rrecorrido ${challenger[i].track}`)}
+    if (challenger[i].on==false) {console.log(`este ya gano`);i=0;continue}
+    if (challenger[i].track>=pista && challenger[i].on==true) {challenger[i].on=false;podio.push(challenger[i]);}
+    if (i==(challenger.length-1)) {i=-1;}
+}
+
+
+console.log(podio);
+
 let msj=player.show()
 document.write(msj);
 
-alert("¡Game Over!");
-
-
+// alert("¡Game Over!");
