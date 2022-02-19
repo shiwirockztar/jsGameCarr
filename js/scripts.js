@@ -21,7 +21,7 @@ class Rival{
     show(){
         console.log(`El jugador  ${this.name} juega con el carro ${this.team} y lleva ${this.track}000 avanzado`);
         let text =`El jugador  ${this.name} juega con el equipo ${this.team} y lleva ${this.track}000 avanzado`;
-        return text;
+        // return text;
     }
     apagar(){
         this.on=false
@@ -40,7 +40,8 @@ let team = prompt(`Por favo1 introduzca su equipo`);
 let player = new Rival(name,team);   //Usuario
 
 
-let bots=Math.floor(Math.random() * 5) + 3;  //Bots
+let bots=Math.floor(Math.random() * 5) + 2;  //Bots
+console.log("numero de bots son : ",bots);
 for (let i = 0; i< bots; i++) {challenger[i]= new Rival(rivals[i],teams[i]); } 
 
 let podio =[];
@@ -48,11 +49,32 @@ let podio =[];
 challenger.unshift(player); //indexando el usuario a lista de competidores
 
 // ===========********* impresiones ************==============
+document.write("");
+
 console.log(challenger);
+console.table(challenger);
+
 
 for (let i = 0 ; podio.length < 3; i++) {  
-    
-    if (challenger[i].on==false) {continue;}           //si ya gano se salta a el siguiente jugador
+    try{
+        if (challenger[i].on==false) {continue;}           //si ya gano se salta a el siguiente jugador   
+    }catch(error){
+        console.log("se reiniciara el DOM");
+        // document.write("Toca F5 por favor");
+        alert("¡UPS¡ hubo un error la pagina se recargara ");
+        // swal("¡UPS¡", "Se recargara la pagina por error", "success");
+        // swal("Good job!", "You clicked the button!", "success");
+        // swal({
+        //     title: "¡UPS¡",
+        //     text: "Se recargara la pagina por error",
+        //     icon: "warning",
+        //     button: "0k",
+        // });
+
+        location.reload();
+
+
+    }
     if (challenger[i].on==true) {challenger[i].run();} //solo correran los que no hayan ganado 
     if (challenger[i].on==true && challenger[i].track>=meta) {challenger[i].on=false;podio.push(challenger[i]);} //** si ya alcanzo o supero la meta se pasa a el podio
     if (i==(challenger.length-1)) {i=-1;}              //si se alcanza el final del arreglo vuelve al inicio
@@ -60,8 +82,15 @@ for (let i = 0 ; podio.length < 3; i++) {
 
 
 console.log(podio);
+console.table(podio);
 
-// let msj=player.show()
-// document.write(msj);
+
+let file= `1er lugar para : ${podio[0].name}`
+let File={};
+document.write(file);
 
 // alert("¡Game Over!");
+// swal("¡Game Over!","try again");
+// alert(str.fontcolor( "red" ));
+
+
