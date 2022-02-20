@@ -24,7 +24,7 @@ class Rival{
         // return text;
     }
     apagar(){
-        this.on=false
+        this.on=false;
     }
     get getTrack(){
         return this.track;
@@ -60,20 +60,8 @@ for (let i = 0 ; podio.length < 3; i++) {
         if (challenger[i].on==false) {continue;}           //si ya gano se salta a el siguiente jugador   
     }catch(error){
         console.log("se reiniciara el DOM");
-        // document.write("Toca F5 por favor");
         alert("¡UPS¡ hubo un error la pagina se recargara ");
-        // swal("¡UPS¡", "Se recargara la pagina por error", "success");
-        // swal("Good job!", "You clicked the button!", "success");
-        // swal({
-        //     title: "¡UPS¡",
-        //     text: "Se recargara la pagina por error",
-        //     icon: "warning",
-        //     button: "0k",
-        // });
-
         location.reload();
-
-
     }
     if (challenger[i].on==true) {challenger[i].run();} //solo correran los que no hayan ganado 
     if (challenger[i].on==true && challenger[i].track>=meta) {challenger[i].on=false;podio.push(challenger[i]);} //** si ya alcanzo o supero la meta se pasa a el podio
@@ -86,7 +74,26 @@ console.table(podio);
 
 
 let file= `1er lugar para : ${podio[0].name}`
-let File={};
+// let File={};
+
+function podioObj() {
+    let first=podio[0].name;
+    let second=podio[1].name;
+    let third=podio[2].name;
+    return {"first":first, "second":second, "third":third}
+}
+function savePodio(Podio) {
+    let saveJson=JSON.stringify(Podio);
+    localStorage.setItem("save",saveJson);
+    return saveJson;
+}
+
+
+let Podio=podioObj();
+console.log(Podio);
+
+let File=savePodio(Podio);
+console.log(File);
 document.write(file);
 
 // alert("¡Game Over!");
