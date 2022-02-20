@@ -51,7 +51,7 @@ for (let i = 0 ; podio.length < 3; i++) {
     }catch(error){ console.log("se reiniciara el DOM");alert("¡UPS¡ hubo un error la pagina se recargara ");location.reload();}
     //solo correran los que no hayan ganado
     if (challenger[i].on==true) {challenger[i].run();} 
-    //** si ya alcanzo o supero la meta se pasa a el podio 
+    //si ya alcanzo o supero la meta se pasa a el podio 
     if (challenger[i].on==true && challenger[i].track>=meta) {challenger[i].on=false;podio.push(challenger[i]);} 
     //si se alcanza el final del arreglo vuelve al inicio
     if (i==(challenger.length-1)) {i=-1;}              
@@ -69,7 +69,11 @@ function podioObj() {
 }
 // -----archivo como Json---
 function savePodio(Podio) {
-    let saveJson=JSON.stringify(Podio);
+    //creamos arreglo para guardar varios podios
+    let arrayPodio=[];
+    arrayPodio.push(Podio);
+    //se hace string
+    let saveJson=JSON.stringify(arrayPodio);
     localStorage.setItem("save",saveJson);
     return saveJson;
 }
