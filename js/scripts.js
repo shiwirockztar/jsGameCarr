@@ -69,11 +69,14 @@ function podioObj() {
 }
 // -----archivo como Json---
 function savePodio(Podio) {
+
     //creamos arreglo para guardar varios podios
-    let arrayPodio=[];
-    arrayPodio.push(Podio);
+    let arrayPodio=[];//no sirve para nada
+    let arrayPodioJson=localStorage.getItem("save");
+    oldPodioObj=JSON.parse(arrayPodioJson);
+    oldPodioObj.push(Podio);
     //se hace string
-    let saveJson=JSON.stringify(arrayPodio);
+    let saveJson=JSON.stringify(oldPodioObj);
     localStorage.setItem("save",saveJson);
     return saveJson;
 }
