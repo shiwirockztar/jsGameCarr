@@ -26,76 +26,64 @@ class Rival{
     apagar(){
         this.on=false;
     }
-    get getTrack(){
-        return this.track;
-    }
 }
 
 // -------------------------------    Comienza el juego  -----------------------
 let meta=Math.floor(Math.random() * 30) + 10;   //meta f
 console.log(`la meta esta a los ${meta}000 mts`);
 
+let podio =[];
 let name= prompt(`Por favor introduzca su nombre`);
 let team = prompt(`Por favo1 introduzca su equipo`);
 let player = new Rival(name,team);   //Usuario
 
-
 let bots=Math.floor(Math.random() * 5) + 2;  //Bots
-console.log("numero de bots son : ",bots);
 for (let i = 0; i< bots; i++) {challenger[i]= new Rival(rivals[i],teams[i]); } 
 
-let podio =[];
-
 challenger.unshift(player); //indexando el usuario a lista de competidores
-
-// ===========********* impresiones ************==============
-document.write("");
-
-console.log(challenger);
 console.table(challenger);
 
+// ********************* start racing *****************
 
 for (let i = 0 ; podio.length < 3; i++) {  
-    try{
-        if (challenger[i].on==false) {continue;}           //si ya gano se salta a el siguiente jugador   
-    }catch(error){
-        console.log("se reiniciara el DOM");
-        alert("¡UPS¡ hubo un error la pagina se recargara ");
-        location.reload();
-    }
-    if (challenger[i].on==true) {challenger[i].run();} //solo correran los que no hayan ganado 
-    if (challenger[i].on==true && challenger[i].track>=meta) {challenger[i].on=false;podio.push(challenger[i]);} //** si ya alcanzo o supero la meta se pasa a el podio
-    if (i==(challenger.length-1)) {i=-1;}              //si se alcanza el final del arreglo vuelve al inicio
+    //si ya gano se salta a el siguiente jugador
+    try{if (challenger[i].on==false) {continue;}       
+    }catch(error){ console.log("se reiniciara el DOM");alert("¡UPS¡ hubo un error la pagina se recargara ");location.reload();}
+    //solo correran los que no hayan ganado
+    if (challenger[i].on==true) {challenger[i].run();} 
+    //** si ya alcanzo o supero la meta se pasa a el podio 
+    if (challenger[i].on==true && challenger[i].track>=meta) {challenger[i].on=false;podio.push(challenger[i]);} 
+    //si se alcanza el final del arreglo vuelve al inicio
+    if (i==(challenger.length-1)) {i=-1;}              
 }
-
-
-console.log(podio);
+// ********************* results *****************
 console.table(podio);
 
-
-let file= `1er lugar para : ${podio[0].name}`
-// let File={};
-
+// ********************* proceso de grabar *****************
+// -----archivo como objeto---
 function podioObj() {
     let first=podio[0].name;
     let second=podio[1].name;
     let third=podio[2].name;
     return {"first":first, "second":second, "third":third}
 }
+// -----archivo como Json---
 function savePodio(Podio) {
     let saveJson=JSON.stringify(Podio);
     localStorage.setItem("save",saveJson);
     return saveJson;
 }
 
-
 let Podio=podioObj();
 console.log(Podio);
 
 let File=savePodio(Podio);
 console.log(File);
-document.write(file);
 
+
+
+let file= `1er lugar para : ${podio[0].name}`
+document.write(file);
 // alert("¡Game Over!");
 // swal("¡Game Over!","try again");
 // alert(str.fontcolor( "red" ));
