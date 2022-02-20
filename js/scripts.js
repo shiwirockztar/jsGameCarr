@@ -5,10 +5,8 @@ let challenger = [];
 
 // creador de competidores
 class Rival{
-    constructor(name,team){
-    // if (name == null ||name== "") {name="player 1"; }        
+    constructor(name,team){      
     this.name =name;
-    // if (team == null || team=="") {team="team"; }
     this.team=team;
     this.track=0;
     this.on=true;}
@@ -28,7 +26,9 @@ class Rival{
     }
 }
 
-// -------------------------------    Comienza el juego  -----------------------
+// ----------------------    Comienza el juego  -----------------------
+// ====================================================================
+
 let meta=Math.floor(Math.random() * 30) + 10;   //meta f
 console.log(`la meta esta a los ${meta}000 mts`);
 
@@ -40,7 +40,7 @@ let player = new Rival(name,team);   //Usuario
 let bots=Math.floor(Math.random() * 5) + 2;  //Bots
 for (let i = 0; i< bots; i++) {challenger[i]= new Rival(rivals[i],teams[i]); } 
 
-challenger.unshift(player); //indexando el usuario a lista de competidores
+challenger.unshift(player); //indexando usuario a lista de competidores
 console.table(challenger);
 
 // ********************* start racing *****************
@@ -56,7 +56,7 @@ for (let i = 0 ; podio.length < 3; i++) {
     //si se alcanza el final del arreglo vuelve al inicio
     if (i==(challenger.length-1)) {i=-1;}              
 }
-// ********************* results *****************
+// *********************    results   *********************
 console.table(podio);
 
 // ********************* proceso de grabar *****************
@@ -67,9 +67,12 @@ function podioObj() {
     let third=podio[2].name;
     return {"first":first, "second":second, "third":third}
 }
+
+// ****** obj *******
+let Podio=podioObj();
+
 // -----archivo como Json---
 function savePodio(Podio) {
-
     //creamos arreglo para guardar varios podios
     let oldPodioObj=JSON.parse(localStorage.getItem("save"))||[];
     oldPodioObj.push(Podio);
@@ -79,13 +82,8 @@ function savePodio(Podio) {
     return saveJson;
 }
 
-
-// ****** obj *******
-let Podio=podioObj();
-console.log(Podio);
 // ****** JSON *****
 let File=savePodio(Podio);
-console.log(File);
 
 
 
