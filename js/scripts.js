@@ -6,9 +6,9 @@ let challenger = [];
 // creador de competidores
 class Rival{
     constructor(name,team){
-    if (name == null ||name== "") {name="player 1"; }        
+    // if (name == null ||name== "") {name="player 1"; }        
     this.name =name;
-    if (team == null || team=="") {team="team"; }
+    // if (team == null || team=="") {team="team"; }
     this.team=team;
     this.track=0;
     this.on=true;}
@@ -33,8 +33,8 @@ let meta=Math.floor(Math.random() * 30) + 10;   //meta f
 console.log(`la meta esta a los ${meta}000 mts`);
 
 let podio =[];
-let name= prompt(`Por favor introduzca su nombre`);
-let team = prompt(`Por favo1 introduzca su equipo`);
+let name= prompt(`Por favor introduzca su nombre`)||"player 1";
+let team = prompt(`Por favo1 introduzca su equipo`)||"team";
 let player = new Rival(name,team);   //Usuario
 
 let bots=Math.floor(Math.random() * 5) + 2;  //Bots
@@ -71,9 +71,7 @@ function podioObj() {
 function savePodio(Podio) {
 
     //creamos arreglo para guardar varios podios
-    let arrayPodio=[];//no sirve para nada
-    let arrayPodioJson=localStorage.getItem("save");
-    oldPodioObj=JSON.parse(arrayPodioJson);
+    let oldPodioObj=JSON.parse(localStorage.getItem("save"))||[];
     oldPodioObj.push(Podio);
     //se hace string
     let saveJson=JSON.stringify(oldPodioObj);
@@ -81,16 +79,21 @@ function savePodio(Podio) {
     return saveJson;
 }
 
+
+// ****** obj *******
 let Podio=podioObj();
 console.log(Podio);
-
+// ****** JSON *****
 let File=savePodio(Podio);
 console.log(File);
 
 
 
+
 let file= `1er lugar para : ${podio[0].name}`
 document.write(file);
+
+
 // alert("¡Game Over!");
 // swal("¡Game Over!","try again");
 // alert(str.fontcolor( "red" ));
