@@ -1,1 +1,21 @@
-ECHO est  activado.
+#myProgress {
+	width: 100%;
+	height: 30px;
+	position: relative;
+	background-color: #ddd;
+}
+
+#myBarA {
+  background-color: #4CAF50;
+  width: 10px;
+  height: 30px;
+  position: ;
+}
+
+#myBarB {
+  background-color: #FF00DC;
+  width: 10px;
+  height: 30px;
+  position: ;
+}
+

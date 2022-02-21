@@ -87,11 +87,6 @@ let File=savePodio(Podio);
 
 
 
-
-let file= `1er lugar para : ${podio[0].name}`
-document.write(file);
-
-
 // alert("¡Game Over!");
 // swal("¡Game Over!","try again");
 // alert(str.fontcolor( "red" ));
