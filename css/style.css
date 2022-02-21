@@ -5,15 +5,22 @@
 	background-color: #ddd;
 }
 
-#myBarA {
+#myBar0 {
   background-color: #4CAF50;
   width: 10px;
   height: 30px;
   position: ;
 }
 
-#myBarB {
+#myBar1 {
   background-color: #FF00DC;
+  width: 10px;
+  height: 30px;
+  position: ;
+}
+
+#myBar2 {
+  background-color: #B200FF;
   width: 10px;
   height: 30px;
   position: ;
