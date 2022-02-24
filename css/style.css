@@ -1,18 +1,4 @@
-#myProgress {
-	width: 100%;
-	height: 30px;
-	position: relative;
-	background-color: #ddd;
-}
-
-#myBar0 {
-  background-color: #4CAF50;
-  width: 10px;
-  height: 30px;
-  position: ;
-}
-
-#myBar1 {
+/*#myBar1 {
   background-color: #FF00DC;
   width: 10px;
   height: 30px;
@@ -24,5 +10,19 @@
   width: 10px;
   height: 30px;
   position: ;
+}*/
+
+/*******************************************************/
+#myBar {
+  background-color: #4CAF50;
+  width: 10px;
+  height: 30px;
+  position: ;
 }
 
+.myProgress {
+	width: 100%;
+	height: 30px;
+	position: relative;
+	background-color: #ddd;
+}
