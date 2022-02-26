@@ -14,9 +14,50 @@ function move() {
   }
 }
 
+function move0() {
+    const element = document.getElementById("myBar0");   
+    let width = 0;
+    const id = setInterval(frame, 10);
+    function frame() {
+        if (width == 100) {
+          clearInterval(id);
+      } else {
+          width++; 
+          element.style.width = width + '%'; 
+      }
+  }
+}
 
 
-function dinamic(playerN) {
+function move1() {
+    const element = document.getElementById("myBar1");   
+    let width = 0;
+    const id = setInterval(frame, 10);
+    function frame() {
+        if (width == 100) {
+          clearInterval(id);
+      } else {
+          width++; 
+          element.style.width = width + '%'; 
+      }
+  }
+}
+function move2() {
+    const element = document.getElementById("myBar2");   
+    let width = 0;
+    const id = setInterval(frame, 10);
+    function frame() {
+        if (width == 100) {
+          clearInterval(id);
+      } else {
+          width++; 
+          element.style.width = width + '%'; 
+      }
+  }
+}
+
+
+function dinamic(playerN,N) {
     let div =document.createElement("div");
     div.setAttribute("class","player");
     let h3=document.createElement("h3");
@@ -29,7 +70,7 @@ function dinamic(playerN) {
     divP.setAttribute("class","myProgress");
     div.appendChild(divP);
     let divB =document.createElement("div");
-    divB.setAttribute("id","myBar");
+    divB.setAttribute("id",`Bar${N}`);
     divP.appendChild(divB);
     let br =document.createElement("br");
     div.appendChild(br);
@@ -39,9 +80,9 @@ function dinamic(playerN) {
     racers.appendChild(div);
 }
 
-dinamic(podio[0].name);
-dinamic(podio[1].name);
-dinamic(podio[2].name);
+dinamic(podio[0].name,0);
+dinamic(podio[1].name,1);
+dinamic(podio[2].name,2);
 
 
 

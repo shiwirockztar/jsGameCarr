@@ -1,4 +1,53 @@
-/*#myBar1 {
+body{
+	padding: 0px;
+	margin: 0;
+	/*font-family: "Krona One" , sans-serif;*/
+}
+
+header{
+	background: url("https://images.hdqwalls.com/wallpapers/f1-cars-racing-digital-art-4k-2n.jpg");
+	position: relative;
+	height: 80vh;
+	background-size: cover;
+}
+
+
+ #racers{
+	background : url(../ima/c.png) ;
+	/*background: url(../ima/Fondo.png);*/
+
+	position: relative;
+	height: 80vh;
+	background-size: cover;
+}
+.contenedor{
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+}
+.logo{
+	height: 90px;	
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+
+header .menu{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 20px;
+}
+
+#myBar0 {
+  background-color: #B200FF;
+  width: 10px;
+  height: 30px;
+  position: ;
+}
+#myBar1 {
   background-color: #FF00DC;
   width: 10px;
   height: 30px;
@@ -10,7 +59,7 @@
   width: 10px;
   height: 30px;
   position: ;
-}*/
+}
 
 /*******************************************************/
 #myBar {
