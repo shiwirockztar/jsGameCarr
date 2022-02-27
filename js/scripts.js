@@ -2,6 +2,7 @@
 const rivals =["hamilton","vettel","alonso","montoya","button","flash"];        
 const teams =["maclaren","redbull","ferrari","wiliams","aston martin","dc"];
 let challenger = [];
+let history=[];
 
 // creador de competidores
 class Rival{
@@ -50,7 +51,7 @@ for (let i = 0 ; podio.length < 3; i++) {
     try{if (challenger[i].on==false) {continue;}       
     }catch(error){ console.log("se reiniciara el DOM");alert("¡UPS¡ hubo un error la pagina se recargara ");location.reload();}
     //solo correran los que no hayan ganado
-    if (challenger[i].on==true) {challenger[i].run();} 
+    if (challenger[i].on==true) {challenger[i].run();history.push(challenger[i].track);} 
     //si ya alcanzo o supero la meta se pasa a el podio 
     if (challenger[i].on==true && challenger[i].track>=meta) {challenger[i].on=false;podio.push(challenger[i]);} 
     //si se alcanza el final del arreglo vuelve al inicio

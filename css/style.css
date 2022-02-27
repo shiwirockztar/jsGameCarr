@@ -1,3 +1,4 @@
+  /*background-color: #B200FF;*/
 body{
 	padding: 0px;
 	margin: 0;
@@ -40,33 +41,36 @@ header .menu{
 	justify-content: space-between;
 	padding-top: 20px;
 }
+/*******************************************************/
+#Bar0,#Bar1,#Bar2,#Bar3,#Bar4,#Bar5 {
+	background-color: #FF0000;
+  width: 10px;
+  height: 30px;
 
-#myBar0 {
-  background-color: #B200FF;
-  width: 10px;
-  height: 30px;
-  position: ;
 }
-#myBar1 {
-  background-color: #FF00DC;
-  width: 10px;
-  height: 30px;
-  position: ;
+#Bar1 {
+  background-color: #FF6600;
 }
 
-#myBar2 {
-  background-color: #B200FF;
-  width: 10px;
-  height: 30px;
-  position: ;
+#Bar2 {
+  background-color: #ffff00;
+}
+#Bar3 {
+  background-color: #00ff00;
+}
+#Bar4 {
+  background-color: #00FFFF;
+}
+
+#Bar5 {
+  background-color: #ff00ff;
 }
 
 /*******************************************************/
-#myBar {
+#Bar {
   background-color: #4CAF50;
   width: 10px;
   height: 30px;
-  position: ;
 }
 
 .myProgress {

@@ -1,9 +1,9 @@
 // scripts frontend page
 
 function move() {
-    const element = document.getElementById("myBar");   
+    const element = document.getElementById("Bar");   
     let width = 0;
-    const id = setInterval(frame, 10);
+    const id = setInterval(frame, 100);
     function frame() {
         if (width == 100) {
           clearInterval(id);
@@ -14,8 +14,14 @@ function move() {
   }
 }
 
+function progress(argument) {
+    const element = document.getElementById("Bar");   
+
+}
+
+
 function move0() {
-    const element = document.getElementById("myBar0");   
+    const element = document.getElementById("Bar0");   
     let width = 0;
     const id = setInterval(frame, 10);
     function frame() {
@@ -30,7 +36,7 @@ function move0() {
 
 
 function move1() {
-    const element = document.getElementById("myBar1");   
+    const element = document.getElementById("Bar1");   
     let width = 0;
     const id = setInterval(frame, 10);
     function frame() {
@@ -43,7 +49,7 @@ function move1() {
   }
 }
 function move2() {
-    const element = document.getElementById("myBar2");   
+    const element = document.getElementById("Bar2");   
     let width = 0;
     const id = setInterval(frame, 10);
     function frame() {
@@ -55,7 +61,19 @@ function move2() {
       }
   }
 }
-
+function moveN(N) {
+    const element = document.getElementById(`Bar${N}`);   
+    let width = 0;
+    const id = setInterval(frame, 10);
+    function frame() {
+        if (width == 100) {
+          clearInterval(id);
+      } else {
+          width++; 
+          element.style.width = width + '%'; 
+      }
+  }
+}
 
 function dinamic(playerN,N) {
     let div =document.createElement("div");
@@ -80,14 +98,35 @@ function dinamic(playerN,N) {
     racers.appendChild(div);
 }
 
-dinamic(podio[0].name,0);
-dinamic(podio[1].name,1);
-dinamic(podio[2].name,2);
+// dinamic(podio[0].name,0);
+// dinamic(podio[1].name,1);
+// dinamic(podio[2].name,2);
+
+let mov=`moveN()`;
+for (chall in challenger) {
+    dinamic(challenger[chall].name,chall);
+    // let text = mov;
+    let text = `, move${chall}()`;
+    // let result = mov.concat(text);
+    mov = mov.concat(text);
+
+    // mov = result;
+}
 
 
+let but=document.createElement("BUTTON");
+but.innerHTML="st4rt";
+// but.setAttribute('onclick', mov);
+but.setAttribute('onclick', moveN(0));
+let header=document.querySelector("header") 
+header.appendChild(but);
 
 let file= `1er lugar para : ${podio[0].name}`
 document.write(file);
+document.write("<br>");
+document.write(history);
+document.write("<br>");
+document.write(mov);
 
 // document.getElementById("user").innerHTML = podio[0].name;
 // document.getElementById("bot1").innerHTML = podio[1].name;
@@ -98,3 +137,4 @@ document.write(file);
 // let=moven("myBar0");
 // move("myBar1");
 // let tx1="myBar1";
+
