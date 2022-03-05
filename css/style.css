@@ -8,23 +8,25 @@ body{
 header{
 	background: url("https://images.hdqwalls.com/wallpapers/f1-cars-racing-digital-art-4k-2n.jpg");
 	position: relative;
-	height: 50vh;
+	height: 80vh;
 	background-size: cover;
 }
 
 
- #racers{
-	background : url(../ima/c.png) ;
-	/*background: url(../ima/Fondo.png);*/
-
-	position: relative;
-	height: 50vh;
-	background-size: cover;
-}
 .contenedor{
-	width: 90%;
-	max-width: 1200px;
+	width: 100%;
+	max-width: 1400px;
 	margin: auto;
+}
+
+#racers{
+	background : url(../ima/g.png) ;
+	background : url("https://besthqwallpapers.com/Temp/5-3-2022/4k-3d-checkered-flag-racing-flag-black-and-white-flag-finish-flag-besthqwallpapers.com-1600x900.jpg");
+
+	/*pngwing.com (32)*/
+	position: relative;
+	height: 80vh;
+	background-size: cover;
 }
 .logo{
 	height: 90px;	
@@ -42,7 +44,7 @@ header .menu{
 	padding-top: 20px;
 }
 /*******************************************************/
-#Bar0,#Bar1,#Bar2,#Bar3,#Bar4,#Bar5 {
+#Bar0,#Bar1,#Bar2,#Bar3,#Bar4,#Bar5,#Bar6 {
 	background-color: #FF0000;
   width: 10px;
   height: 30px;
