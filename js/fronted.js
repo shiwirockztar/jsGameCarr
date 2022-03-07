@@ -18,7 +18,8 @@ console.log(`3er lugar para : ${podio[2].name}`);
 let mov=`moveN()`;
 for (chall in challenger) {dinamic(challenger[chall].name,chall);    let text = `, move${chall}()`; mov = mov.concat(text);}
 
-let but=document.createElement("BUTTON");
+// let but=document.createElement("BUTTON");
+let but=document.createElement("a");
 but.innerHTML="Start";
 but.setAttribute('onclick', "start()"); 
 // let header=document.querySelector("header") 
@@ -42,8 +43,8 @@ function dinamic(playerN,N) {
     let divB =document.createElement("div");
     divB.setAttribute("id",`Bar${N}`);
     divP.appendChild(divB);
-    let br =document.createElement("br");
-    div.appendChild(br);
+    // let br =document.createElement("br");
+    // div.appendChild(br);
 
     // document.getElementById("racers").appendChild(div); 
     let racers=document.querySelector("#racers")     //forma directa de pasar elementos

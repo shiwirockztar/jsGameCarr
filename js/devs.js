@@ -29,7 +29,7 @@ class Rival{
 // ----------------------    Comienza el juego  -----------------------
 // ====================================================================
 
-let meta=Math.floor(Math.random() * 30) + 18;   //meta f
+let meta=Math.floor(Math.random() * 100) + 36;   //meta f
 console.log(`la meta esta a los ${meta}000 mts`);
 
 let podio =[];
@@ -37,8 +37,8 @@ let name= prompt(`Por favor introduzca su nombre`)||"player 1";
 let team = prompt(`Por favor introduzca su equipo`)||"team";
 let player = new Rival(name,team);   //Usuario
 
-let bots=Math.floor(Math.random() * 5) + 2;  //Bots
-// let bots=6;
+// let bots=Math.floor(Math.random() * 5) + 2;  //Bots
+let bots=6;
 for (let i = 0; i< bots; i++) {challenger[i]= new Rival(rivals[i],teams[i]); } 
 
 challenger.unshift(player); //indexando usuario a lista de competidores
