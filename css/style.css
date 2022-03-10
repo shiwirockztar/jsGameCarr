@@ -1,12 +1,7 @@
-  /*background-color: #B200FF;*/
 body{
 	padding: 0px;
 	margin: 0;
-	/*background : url(../ima/g.png) ;*/
-	background : url(../ima/b.png) ;
-
-	/*background: rgba(0, 153, 153,.5);*/
-
+	background : url(../ima/b.png) ;/*background : url(../ima/g.png) ;*//*background: rgba(0, 153, 153,.5);*/
 	/*font-family: "Krona One" , sans-serif;*/
 }
 
@@ -18,44 +13,39 @@ header{
 	background-size: cover;
 }
 
-
 .contenedor{
-	background: url("https://images.hdqwalls.com/wallpapers/f1-cars-racing-digital-art-4k-2n.jpg");
+	/*background: url("https://images.hdqwalls.com/wallpapers/f1-cars-racing-digital-art-4k-2n.jpg");*//*background : url(../ima/pngwing.com (3)) ;*/
 	background : url("https://besthqwallpapers.com/Temp/5-3-2022/4k-3d-checkered-flag-racing-flag-black-and-white-flag-finish-flag-besthqwallpapers.com-1600x900.jpg");
-
-	/*background : url(../ima/pngwing.com (3)) ;*/
 	/*opacity: 0.5;*/
 	background-size: cover;
 	height: 100%;
 	width: 90%;
-	max-width: 1400px;
+	max-width: 1200px;
 	margin: auto;
-	border-bottom: 3px groove #fb1b03;
-	margin-top: 20px;
-	padding-top: 15px;
+	border-bottom: 3px groove #ff00ff;
 }
 
-#racers{
-	/*background : url(../ima/1.png) ;*/
-	/*background : url("https://besthqwallpapers.com/Temp/5-3-2022/4k-3d-checkered-flag-racing-flag-black-and-white-flag-finish-flag-besthqwallpapers.com-1600x900.jpg");*/
-	/*width: 90%;*/
-	position: relative;
-	height:80vh;
-	background-size: cover;
-
+.logo_menu{
+	display: flex;
+	align-items: center;
 }
+
 .logo{
-	position: absolute;
-	height: 207px;	
-	top: -17px;
-	left: -25px;
+	height: 90px;	
+}
+nav{
+	display: flex;
 }
 a{
 	text-decoration: none;
-	color: #fb1b03;
+	color: #ff00ff;
 }
 li{
 	list-style: none;
+}
+li a{
+	display: block;
+	
 }
 
 .menu{
@@ -64,23 +54,43 @@ li{
 	padding-top: 20px;
 	align-items: center;
 }
-.logo_menu{
-	display: flex;
-	align-items: center;
-}
 #boton{
 	position: absolute;
   left: 81%;
-	background: #fb1b03;
+	background: #ff00ff;
 	padding: 15px 20px;
 }
 #boton a{
 	color: white;
 }
+.retro {
+	background: linear-gradient(
+		#0000ff 15%,
+		#aaffff 35%,
+		#ccffff 45%,
+		#000011 55%,
+		#000000 52%,
+		#000044 60%,
+		#000066 70%,
+		#000099 80%,
+		#0000ff 85%
+	);
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	/*font-size: 100px;*/
+	font-family: 'Poppins', sans-serif;
+	-webkit-text-stroke: 1px #ff00ff;
+	text-align: center;
+}
+
 
 /*******************************************************/
+#racers{
+
+}
 .player{
-	margin-left: 72px;
+	margin: auto;
 	margin-bottom: 15px;
 	padding: 15px;
 	border-radius: 15px;
@@ -140,7 +150,7 @@ h3{
 
 .myProgress {
 	height: 15px;
-	width: 80%;
+	width: 72%;
 	position: relative;
 	background-color: #ddd;
 }
