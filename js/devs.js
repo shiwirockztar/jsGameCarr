@@ -1,6 +1,6 @@
 // bots rivales
-const rivals =["hamilton","vettel","alonso","montoya","button","flash"];        
-const teams =["maclaren","redbull","ferrari","wiliams","aston martin","dc"];
+const rivals =["Hamilton","Vettel","Alonso","Montoya","Button","Flash"];        
+const teams =["Mclaren","Redbull","Ferrari","Wiliams","Aston martin","Dc"];
 let challenger = [];
 
 // creador de competidores
