@@ -14,7 +14,15 @@
     <!-- alerts -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
- 
+    <script>
+     // script que habla algo
+    let msgN=new SpeechSynthesisUtterance();
+    msgN.text="Que comienze el juego";
+    msgN.lang='es-Es';
+    window.speechSynthesis.speak(msgN);
+    console.log("mensaje enviado");
+    </script>
+    
 </head>
 <body>
 
@@ -23,7 +31,7 @@
             <div class="menu">
                 <div class="logo_menu">
                     
-                    <img src="ima/Ph03nyx-Super-Mario-Chain-Chomp.ico" alt="" class="logo"><!-- <img src="ima/x.png" alt="" class="logo"> -->
+                    <img src="ima/logo.png" alt="" class="logo"><!-- <img src="ima/x.png" alt="" class="logo"> -->
 
                     <nav>
                         <ul>
@@ -35,11 +43,27 @@
                     </nav>
                 <!-- <h1 class="retro">GameCarr</h1> -->
                 </div>
+                <h1 class="retro">RACERGAME</h1>
+                
                 <div id="boton"></div>
+            </div>
+
+            <div class="titular">
+                <div class="parrafo">
+
+                    <h1>Reto de programacion <br> 
+                    Juego de carreras con habilidades de 
+                    persistencia de datos en código javascript 
+                    </h1>
+                    <img src="ima/spamparrafo2.png" alt="" class="spam">
+                </div>
             </div>
         </div>
     </header>
-
+    <div class="BottomHeader">
+        <!-- <img src="ima/DivBottomHeader.png" alt=""> -->
+    </div>
+    <br><br>
     <section id="racers"><br></section>   
 
 
@@ -47,5 +71,25 @@
 </body>
 <!-- frontend -->
 <script src="./js/fronted.js"></script>
+
+
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googLeapis.com/css?famiLy=Material+Icons">
+    <!-- Material Icons OutLined -->
+    <link rel="stylesheet" href="https://fonts.googLeapis.com/css?family=Material+Icons+Outlined">
+    <!-- Material Icons Two Tone -->
+    <link rel="stylesheet" href="https://fonts. googleapis.com/css?family=Material+Icons+Two+Tone">
+    <!-- Material Icons Rounded --> 
+    <link rel="stylesheet" href="https://fonts.googLeapis.com/css?famiLy=Material+Icons+Round">
+    <!-- Material Icons Sharp -->
+    <link rel="stylesheet" href="https://fonts.googLeapis.com/css?famiLy=Material+Icons+Sharp">
 </html>     
 
