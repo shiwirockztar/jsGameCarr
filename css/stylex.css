@@ -53,7 +53,7 @@ body.dark{
 /* ===== Reusable code - Here ===== */
 .sidebar li{height: 50px;list-style: none;display: flex;align-items: center;margin-top: 10px;}
 
-.sidebar header .image,.sidebar .icon{min-width: 60px;border-radius: 6px;}
+.sidebar headerx .image,.sidebar .icon{min-width: 60px;border-radius: 6px;}
 
 .sidebar .icon{
     min-width: 60px;
@@ -78,43 +78,43 @@ body.dark{
     opacity: 0;
 }
 /* =========================== */
-.sidebar header{
+.sidebar headerx{
     position: relative;
 }
 
-.sidebar header .image-text{
+.sidebar headerx .image-text{
     display: flex;
     align-items: center;
 }
-.sidebar header .logo-text{
+.sidebar headerx .logo-text{
     display: flex;
     flex-direction: column;
 }
 
-header .image-text .name {
+headerx .image-text .name {
     margin-top: 2px;
     font-size: 18px;
     font-weight: 600;
 }
 
-header .image-text .profession{
+headerx .image-text .profession{
     font-size: 16px;
     margin-top: -2px;
     display: block;
 }
 
-.sidebar header .image{
+.sidebar headerx .image{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.sidebar header .image img{
-/*    width: 40px;
-    border-radius: 6px;*/
+.sidebar headerx .image img{
+    width: 40px;
+    border-radius: 6px;
 }
 
-.sidebar header .toggle{
+.sidebar headerx .toggle{
     cursor: pointer;border-radius: 50%;
     position: absolute;top: 50%;right: -25px;
     height: 25px;width: 25px;
@@ -126,7 +126,7 @@ header .image-text .profession{
     transition: var(--tran-05);
 }
 
-body.dark .sidebar header .toggle{
+body.dark .sidebar headerx .toggle{
     color: var(--text-color);
 }
 
@@ -134,7 +134,7 @@ body.dark .sidebar header .toggle{
     transform: translateY(-50%) rotate(0deg);
 }
 
-.sidebar .menu{
+.sidebar .menux{
     margin-top: 40px;
 }
 
@@ -257,7 +257,7 @@ body.dark .switch::before{
     left: 20px;
 }
 
-.header{
+.home{
     position: absolute;
     top: 0;
     top: 0;
@@ -267,19 +267,19 @@ body.dark .switch::before{
     background-color: var(--body-color);
     transition: var(--tran-05);
 }
-.header .text{
+.home .text{
     font-size: 30px;
     font-weight: 500;
     color: var(--text-color);
     padding: 12px 60px;
 }
 
-.sidebar.close ~ .header{
+.sidebar.close ~ .home{
     left: 78px;
     height: 100vh;
     width: calc(100% - 78px);
 }
 
-body.dark .header .text{
+body.dark .home .text{
     color: var(--text-color);
 }

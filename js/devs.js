@@ -37,8 +37,8 @@ let name= prompt(`Por favor introduzca su nombre`)||"player 1";
 let team = prompt(`Por favor introduzca su equipo`)||"team";
 let player = new Rival(name,team);   //Usuario
 
-// let bots=Math.floor(Math.random() * 5) + 2;  //Bots
-let bots=6;
+let bots=Math.floor(Math.random() * 5) + 2;  //Bots
+// let bots=6;
 for (let i = 0; i< bots; i++) {challenger[i]= new Rival(rivals[i],teams[i]); } 
 
 challenger.unshift(player); //indexando usuario a lista de competidores

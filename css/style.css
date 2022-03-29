@@ -6,7 +6,7 @@ body{padding: 0px;margin: 0; /*background : url(../ima/b.png)*/ ; font-family: '
 a{text-decoration: none;color: #ff00ff;}
 li{list-style: none;}
 
-header{position: relative;height: 80vh;background : url(../ima/header.png); background-size: cover}
+header{position: relative;height: 80vh;background : url(../ima/headerLow.png); background-size: cover}
 
 .contenedor{max-width: 1280px; height: 100%;width: 90%;margin: auto;}
 	/*opacity: 0.5;*/
@@ -116,8 +116,8 @@ h3{
 	/*font-family: 'Smooch Sans', sans-serif;*/
 	/*font-family: 'Fredoka', sans-serif;*/
 	/*font-family: 'Smooch Sans', sans-serif;*/
-	font-family: 'Krona One', sans-serif;
-	color: white;margin: 0px;padding: 0;
+	/*font-family: 'Krona One', sans-serif;*/
+	color: white;margin-bottom: 2px;padding: 0;font-size: 16px;
 }
 #Bar0,#Bar1,#Bar2,#Bar3,#Bar4,#Bar5,#Bar6 {width: 10px;height: 15px;}
 #Bar0 {background-color: cyan;}/*background-color: violet;*/
