@@ -6,7 +6,8 @@ body{padding: 0px;margin: 0; /*background : url(../ima/b.png)*/ ; font-family: '
 a{text-decoration: none;color: #ff00ff;}
 li{list-style: none;}
 
-header{position: relative;height: 80vh;background : url(../ima/headerLow.png); background-size: cover}
+/*header{position: relative;height: 80vh;background : url(../ima/headerLow.png); background-size: cover}*/
+#encabezado{position: relative;height: 80vh;background : url(../ima/headerLow.png); background-size: cover}
 
 .contenedor{max-width: 1280px; height: 100%;width: 90%;margin: auto;}
 	/*opacity: 0.5;*/

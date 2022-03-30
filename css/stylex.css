@@ -28,6 +28,7 @@ body{min-height: 100vh;background-color: var(--body-color);transition: var(--tra
 body.dark{
     --body-color: #18191a;
     --sidebar-color: #242526;
+    /*--sidebar-color:rgba(0, 153, 153,.65);*/
     --primary-color: #3a3b3c;
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
@@ -53,7 +54,7 @@ body.dark{
 /* ===== Reusable code - Here ===== */
 .sidebar li{height: 50px;list-style: none;display: flex;align-items: center;margin-top: 10px;}
 
-.sidebar headerx .image,.sidebar .icon{min-width: 60px;border-radius: 6px;}
+.sidebar .headerx .image,.sidebar .icon{min-width: 60px;border-radius: 6px;}
 
 .sidebar .icon{
     min-width: 60px;
@@ -78,43 +79,43 @@ body.dark{
     opacity: 0;
 }
 /* =========================== */
-.sidebar headerx{
+.sidebar .headerx{
     position: relative;
 }
 
-.sidebar headerx .image-text{
+.sidebar .headerx .image-text{
     display: flex;
     align-items: center;
 }
-.sidebar headerx .logo-text{
+.sidebar .headerx .logo-text{
     display: flex;
     flex-direction: column;
 }
 
-headerx .image-text .name {
+.headerx .image-text .name {
     margin-top: 2px;
     font-size: 18px;
     font-weight: 600;
 }
 
-headerx .image-text .profession{
+.headerx .image-text .profession{
     font-size: 16px;
     margin-top: -2px;
     display: block;
 }
 
-.sidebar headerx .image{
+.sidebar .headerx .image{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.sidebar headerx .image img{
+.sidebar .headerx .image img{
     width: 40px;
     border-radius: 6px;
 }
 
-.sidebar headerx .toggle{
+.sidebar .headerx .toggle{
     cursor: pointer;border-radius: 50%;
     position: absolute;top: 50%;right: -25px;
     height: 25px;width: 25px;
@@ -126,7 +127,7 @@ headerx .image-text .profession{
     transition: var(--tran-05);
 }
 
-body.dark .sidebar headerx .toggle{
+body.dark .sidebar .headerx .toggle{
     color: var(--text-color);
 }
 
