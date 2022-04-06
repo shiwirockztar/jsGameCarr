@@ -29,7 +29,7 @@ class Rival{
 // ----------------------    Comienza el juego  -----------------------
 // ====================================================================
 
-let meta=Math.floor(Math.random() * 100) + 36;   //meta f
+let meta=Math.floor(Math.random() * 100) + 120;   //meta f
 console.log(`la meta esta a los ${meta}000 mts`);
 
 let podio =[];

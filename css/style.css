@@ -6,8 +6,10 @@ body{padding: 0px;margin: 0; /*background : url(../ima/b.png)*/ ; font-family: '
 a{text-decoration: none;color: #ff00ff;}
 li{list-style: none;}
 
+#pollposition{color: white;text-align: right;margin-right: 14px;}
 /*header{position: relative;height: 80vh;background : url(../ima/headerLow.png); background-size: cover}*/
 #encabezado{position: relative;height: 80vh;background : url(../ima/headerLow.png); background-size: cover}
+
 
 .contenedor{max-width: 1280px; height: 100%;width: 90%;margin: auto;}
 	/*opacity: 0.5;*/
@@ -98,6 +100,7 @@ navx ul li a{color: white; display: block; font-family: 'Krona One', sans-serif;
 
 .BottomHeader{background : url(../ima/DivBottomHeader.png);position: relative;height: 12vh; background-size: cover} 
 
+
 /*******************************************************/
 #racers{
 
@@ -120,7 +123,7 @@ h3{
 	/*font-family: 'Krona One', sans-serif;*/
 	color: white;margin-bottom: 2px;padding: 0;font-size: 16px;
 }
-#Bar0,#Bar1,#Bar2,#Bar3,#Bar4,#Bar5,#Bar6 {width: 10px;height: 15px;}
+#Bar0,#Bar1,#Bar2,#Bar3,#Bar4,#Bar5,#Bar6 {width: 10px;height: 21px;}
 #Bar0 {background-color: cyan;}/*background-color: violet;*/
 #Bar1 {background-color: magenta;}/*background-color: indigo;*/
 #Bar2 {background-color: blue;}/*background-color: blue;*/
@@ -137,9 +140,11 @@ h3{
 }
 
 .myProgress {
-	height: 15px;
+	height: 21px;
 	width: 72%;
 	position: relative;
 	background-color: #ddd;
 	/*background-color: white;*/
 }
+
+.arrowUp {background: cyan;height: 30px;width: 30px;margin: auto;border-radius: 30px;text-align: center;}

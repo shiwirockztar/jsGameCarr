@@ -52,15 +52,28 @@ function dinamic(playerN,N) {
 }
 // -*********************************************************************
 // *****************------- dinamic advance--------***************
-function start() { for (i in challenger) { moveD(i);} }
+function start() { for (i in challenger) { 
+    // const borrable = document.getElementById("pollposition");
+    // borrable.remove();
+    moveD(i);} }
+    let poll=0;
 function moveD(N) {
-    const element = document.getElementById(`Bar${N}`);   
+    // const element = document.getElementById(`Bar${N}`); 
+    let element = document.getElementById(`Bar${N}`);   
+
     let width = 0;
     let i =0;
     const id = setInterval(frame, 425);
     let rango= 100/meta;
     function frame() {
-        if (width >= 100) {clearInterval(id);} 
+        if (width >= 99 &&poll<3) {clearInterval(id);
+            // element.remove(h4)
+            poll++;
+            let h4=document.createElement("h4");
+            h4.setAttribute("id",`pollposition`);
+            h4.innerHTML=poll;
+            element.appendChild(h4);
+        } 
         else {
             let x=challenger[N].history[i];
             let prom=x*rango;
